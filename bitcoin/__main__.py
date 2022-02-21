@@ -25,7 +25,7 @@ So sending_addresses with a resolution of 1 day has nothing to do with the 30 da
 
 # Metric: Sending Addresses (1 day)
 from sending_addresses import sending_addresses
-taskqueue.add_task(sending_addresses, mongo, 24, 'sending_addresses_1day')
+taskqueue.add_task(sending_addresses, 24, mongo['btc_transactions'], mongo['sending_addresses_1day'])
 
 
 """
