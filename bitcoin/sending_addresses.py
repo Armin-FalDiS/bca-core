@@ -8,8 +8,8 @@ def sending_addresses(client, resolution, collection):
         resolution (int): Resolution in hours
         collection (string): Name of the collection to save to results in
     """
-    # Start time default value is the first bitcoin transaction timestamp (unix)
-    startTime = 1231006505
+    # Start time default value is the first bitcoin transaction timestamp (unix) 2009/Jan/03 00:00
+    startTime = 1230940800
     # Find last record and fetch it's timestamp
     lastId = list(client[collection].find().sort('_id', -1).limit(1))[0]['_id']
     # If it exists
